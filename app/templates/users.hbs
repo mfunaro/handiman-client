@@ -1,1 +1,12 @@
+
+{{link-to 'New user' 'users.new'}}
+
+<h2>Users</h2>
+
+<ul>
+  {{#each model as |user|}}
+    <li>{{user.name}} : {{user.handicap}}</li>
+  {{/each}}
+</ul>
+
 {{outlet}}

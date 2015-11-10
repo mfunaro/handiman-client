@@ -1,0 +1,13 @@
+<h2>New User</h2>
+
+<p>
+  <label for="email">Email</label><br>
+  {{input value=model.email id="email"}}
+</p>
+
+<p>
+  <label for="name">Name</label><br>
+  {{input value=model.name id="name"}}
+</p>
+
+<button {{action 'save'}} id="save">Save</button>

@@ -22,12 +22,13 @@ module.exports = function(environment) {
   if (environment === 'development') {
     ENV.contentSecurityPolicy = {
       'default-src': "'none'",
-      'script-src': "'self'",
+      'script-src': "'self' 'unsafe-eval' http://*:35729",
       'font-src': "'self'",
-      'connect-src': "'self' http://localhost:4000",
+      'connect-src': "'self' http://localhost:*",
       'img-src': "'self'",
       'style-src': "'self'",
-      'media-src': "'self'"
+      'media-src': "'self'",
+      'report-uri':"'self'"
     };
   }
 
