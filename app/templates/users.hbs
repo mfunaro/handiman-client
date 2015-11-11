@@ -5,7 +5,12 @@
 
 <ul>
   {{#each model as |user|}}
-    <li>{{user.name}} : {{user.handicap}}</li>
+    <li>{{user.name}} : {{user.handicap}} {{if user.error user.error}}</li>
+    <ul>
+    {{#each user.rounds as |round|}}
+      <li>{{round.score}}</li>
+    {{/each}}
+</ul>
   {{/each}}
 </ul>
 

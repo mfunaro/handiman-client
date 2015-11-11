@@ -5,5 +5,7 @@ export default DS.Model.extend({
   holes: DS.attr('number'),
   differential: DS.attr('number'),
   user_id: DS.attr('number'),
-  tee_id: DS.attr('number')
+  tee_id: DS.attr('number'),
+
+  user: DS.belongsTo('user')
 });

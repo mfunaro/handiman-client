@@ -10,4 +10,14 @@
   {{input value=model.name id="name"}}
 </p>
 
+<p>
+  <label for="password">Password</label><br>
+  {{input value=model.password id="password"}}
+</p>
+
+<p>
+  <label for="passwordConfirmation">Password Confirmation</label><br>
+  {{input value=model.passwordConfirmation id="passwordConfirmation"}}
+</p>
+
 <button {{action 'save'}} id="save">Save</button>

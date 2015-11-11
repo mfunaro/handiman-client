@@ -7,7 +7,6 @@ export default Ember.Route.extend({
   actions: {
     save: function() {
       var user = this.currentModel;
-      debugger;
       user.save().then(() => {
         this.transitionTo('users');
       });
