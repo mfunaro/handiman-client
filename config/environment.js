@@ -23,19 +23,28 @@ module.exports = function(environment) {
     ENV.contentSecurityPolicy = {
       'default-src': "'none'",
       'script-src': "'self' 'unsafe-eval' http://*:35729",
-      'font-src': "'self'",
+      'font-src': "'self' https://fonts.gstatic.com",
       'connect-src': "'self' http://localhost:*",
       'img-src': "'self'",
-      'style-src': "'self'",
+      'style-src': "'self' https://fonts.googleapis.com",
       'media-src': "'self'",
       'report-uri':"'self'"
     };
+    ENV.authenticator = {
+      backend: 'http://localhost:4000/api'
+    };
+    // ENV.APP.LOG_RESOLVER = true;
+    // ENV.APP.LOG_ACTIVE_GENERATION = true;
+    // ENV.APP.LOG_TRANSITIONS = true;
+    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
+    // ENV.APP.LOG_VIEW_LOOKUPS = true;
+
   }
 
   if (environment === 'test') {
     // Testem prefers this...
     ENV.baseURL = '/';
-    ENV.locationType = 'auto';
+    ENV.locationType = 'none';
 
     // keep test console output quieter
     ENV.APP.LOG_ACTIVE_GENERATION = false;
