@@ -51,7 +51,6 @@ export default Base.extend({
     return new RSVP.Promise((resolve, reject) => {
       if (!isEmpty(tokenAttribute) && !isEmpty(identificationAttribute)) {
         resolve(data);
-        _populateCurrentUser();
       } else {
         reject();
       }

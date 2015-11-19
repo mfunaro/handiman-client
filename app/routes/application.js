@@ -11,7 +11,7 @@ export default Ember.Route.extend(ApplicationRouteMixin,{
 
   sessionAuthenticated() {
     this._super();
-    this._populateCurrentUser().then(user => this.transitionTo('users'));
+    this._populateCurrentUser().then(user => this.transitionTo('user', user.id));
   },
 
   _populateCurrentUser() {
