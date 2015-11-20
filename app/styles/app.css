@@ -22,6 +22,10 @@ h1.page-header {
 	outline: none;
 }
 
+.dashboard-widget-icon {
+  padding-top: 15px;
+}
+
 .side-menu {
 	position: relative;
 	width: 100%;

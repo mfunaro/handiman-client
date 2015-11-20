@@ -8,5 +8,5 @@ export default DS.Model.extend({
   passwordConfirmation: DS.attr('string'),
   error: DS.attr('string'),
 
-  rounds: DS.hasMany('round')
+  rounds: DS.hasMany('round'),
 });
