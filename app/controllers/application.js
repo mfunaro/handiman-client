@@ -6,7 +6,6 @@ export default Ember.Controller.extend({
   actions: {
     invalidateSession() {
       this.get('session').invalidate();
-      this.transitionToRoute('login');
     }
   },
   observeSession: Ember.observer('session.session.authenticated.userID', function() {

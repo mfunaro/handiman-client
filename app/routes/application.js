@@ -2,16 +2,19 @@ import Ember from 'ember';
 import ApplicationRouteMixin from 'ember-simple-auth/mixins/application-route-mixin';
 
 export default Ember.Route.extend(ApplicationRouteMixin,{
-  beforeModel(transition) {
-    this._super(transition);
-    if (this.session.isAuthenticated && this.get('currentUser') && !this.get('currentUser.content')) {
-      return this._populateCurrentUser();
+  beforeModel() {
+    if (this.session.isAuthenticated) {
+      this._populateCurrentUser();
     }
   },
 
   sessionAuthenticated() {
     this._super();
-    this._populateCurrentUser().then(user => this.transitionTo('user', user.id));
+    this.transitionTo('dashboard');
+  },
+
+  sessionInvalidated(){
+   this.transitionTo('login');
   },
 
   _populateCurrentUser() {

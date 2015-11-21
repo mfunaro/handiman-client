@@ -11,8 +11,8 @@ Router.map(function() {
   });
 
   this.route('user', { path: '/users/:user_id' });
-  this.route('login')
-  this.route('dashboard')
+  this.route('login');
+  this.route('dashboard');
 });
 
 export default Router;

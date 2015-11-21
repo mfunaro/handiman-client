@@ -7,6 +7,7 @@ export default DS.Model.extend({
   password: DS.attr('string'),
   passwordConfirmation: DS.attr('string'),
   error: DS.attr('string'),
+  course_count: DS.attr('number'),
 
   rounds: DS.hasMany('round'),
 });
