@@ -6,12 +6,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('users', function() {
-    this.route('new');
-  });
-
   this.route('user', { path: '/users/:user_id' });
   this.route('login');
+  this.route('signup');
   this.route('dashboard');
 });
 
