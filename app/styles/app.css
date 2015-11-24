@@ -1,4 +1,8 @@
 body { padding-top: 66px; }
+a.create-link {
+  cursor: pointer;
+  text-decoration: none;
+}
 
 h1.page-header {
     margin-top: -5px;
